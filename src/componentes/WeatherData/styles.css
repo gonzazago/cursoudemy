@@ -1,0 +1,28 @@
+.weatherDataCont{
+    background: darkred;
+    width: 400px;
+    height: 100px;
+    line-height: 100px;
+    border-radius: 15px 50px 30px;
+}
+
+.weatherExtraInfoContainer{
+    background: #222222;
+    color:lawngreen;
+    width: 40%;
+    display: inline-block;
+
+}
+
+.weatherTemperatureCont{
+    background: aqua;
+    display: inline-block;
+    width: 60%;
+}
+.iconTemperatura{
+
+}
+
+.temperatura{
+
+}
