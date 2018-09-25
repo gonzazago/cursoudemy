@@ -1,8 +1,9 @@
 import React from 'react';
 import WeatherIcons from 'react-weathericons';
-import{CLOUD,CLOUDY,SUN,RAIN,SNOW} from './../../constantes/estadoTiempoConst';
+import{CLOUD,CLOUDY,SUN,RAIN,SNOW,THUNDER} from './../../constantes/estadoTiempoConst';
 import PropTypes from 'prop-types';
 import './styles.css';
+import {DRIZZLE} from "../../constantes/estadoTiempoConst";
 
 
 const stateIcon = estadoTiempo =>{
@@ -22,6 +23,17 @@ const stateIcon = estadoTiempo =>{
     }
 };
 
+
+const icons = {
+    [CLOUD]:"cloud",
+    [CLOUDY]:"cloudy",
+    [SUN]:"day-sunny",
+    [RAIN]:"rain",
+    [SNOW]:"snow",
+    [THUNDER]:"day-thunderstore",
+    [DRIZZLE]:"day-showers"
+};
+
 const getWeatherIcon =  (estadoTiempo) =>{
     return (<WeatherIcons className={'iconTemperatura'} name = {stateIcon(estadoTiempo)} size={"2x"}/>)
 };
@@ -37,7 +49,7 @@ const WeatherTemperature =  ({temperatura,estadoTiempo}) =>(
 
 WeatherTemperature.propType = {
 
-    temperatura: PropTypes.number.isRequired,
+    temperatura: PropTypes.number,
     estadoTiempo: PropTypes.string,
 
 };
