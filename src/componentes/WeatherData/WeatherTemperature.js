@@ -49,7 +49,7 @@ const WeatherTemperature =  ({temperatura,estadoTiempo}) =>(
 
 WeatherTemperature.propType = {
 
-    temperatura: PropTypes.number,
+    temperatura: PropTypes.string,
     estadoTiempo: PropTypes.string,
 
 };

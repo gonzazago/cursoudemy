@@ -24,7 +24,6 @@ const getTempConvert = kelvin =>{
 };
 
 const transforWheaters = weather_data => {
-    debugger;
     const {humidity,temp} = weather_data.main;
     const {speed}= weather_data.wind;
     const estadoTiempo =  getWheaterState(weather_data.weather[0]);

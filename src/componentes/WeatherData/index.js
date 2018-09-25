@@ -17,7 +17,7 @@ const WeatherData = ({ data }) =>{
 
 WeatherData.propTypes ={
     data: PropTypes.shape({
-        temperatura: PropTypes.number,
+        temperatura: PropTypes.string,
         estadoTiempo: PropTypes.string,
         humedad:PropTypes.number,
         viento: PropTypes.string
