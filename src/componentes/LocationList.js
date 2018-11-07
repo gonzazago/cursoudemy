@@ -3,11 +3,13 @@ import PropTypes from 'prop-types';
 import WeatherLocation from "./WeatherLocation";
 
 
-const LocationList =  ({cities}) =>{
-    const handlerWatherLocationClick = ({city,onSelectedLocation}) =>{
+const LocationList =  ({cities,onSelectedLocation}) =>{
+    const handlerWeatherLocationClick = ({city}) =>{
         console.log("handlerWatherLocationClick");
-        onSelectedLocation(city)
-    }
+        console.log(city);
+        onSelectedLocation(city);
+    };
+
     const strToComponents =  cities =>(
         cities.map(city => 
         (
@@ -15,12 +17,12 @@ const LocationList =  ({cities}) =>{
             key={city}
             city = {city}
             onWeatherLocationClick={
-                () => handlerWatherLocationClick(city)
+                () => handlerWeatherLocationClick(city)
             }/>))
     );
     console.log(cities);
     return(
-        <div>
+        <div className="locationList">
             {strToComponents(cities)}
         </div>
     );

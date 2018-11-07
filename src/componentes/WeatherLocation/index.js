@@ -34,10 +34,7 @@ export default  class  WeatherLocation extends Component{
     }
     componentDidUpdate() {
         console.log("componenttDidUpdate");
-
-
     }
-
 
     handleUpdateClick = () =>{
         //Para ir al servidor
@@ -73,12 +70,13 @@ export default  class  WeatherLocation extends Component{
 
     render = () => {
         console.log("render");
+        debugger;
         const {onWeatherLocationClick} = this.props;
 
 
         const {city,data } = this.state;
         return(
-            <div onClick={onWeatherLocationClick}>
+            <div className='weatherLocationCont' onClick={onWeatherLocationClick}>
                 <Location city={city}/>
                 {data  ? <WeatherData data={data}/> : <CircularProgress size={50}/>}
                 <button onClick={this.handleUpdateClick}>Actualizar</button>
